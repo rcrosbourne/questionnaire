@@ -1,13 +1,3 @@
-require 'grape'
+require File.expand_path("../config/initializers.rb", __FILE__)
 
-module Questionnaire
-	class API < Grape::API
-		format :json
-
-		desc "This is a simple test"
-		get :hi do
-			{message: "Hello To you"}
-		end
-	end
-end
 run Questionnaire::API
